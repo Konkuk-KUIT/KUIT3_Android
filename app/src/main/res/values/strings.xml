@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CloneCodingInstagram</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile_name">kuit_official</string>
+</resources>
