@@ -441,14 +441,14 @@
                 app:layout_constraintBottom_toBottomOf="@id/tv_comment_account"
                 android:layout_marginStart="285dp"/>
 
-            <View
+            <!--<View
                 android:id="@+id/view2"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_margin="10dp"
                 android:background="#DBDBDB"
                 app:layout_constraintBottom_toTopOf="@id/fl_bottom_bar"
-                />
+                />-->
 
             <!--<FrameLayout
                 android:id="@+id/fl_bottom_bar"
