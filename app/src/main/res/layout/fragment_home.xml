@@ -242,9 +242,10 @@
                 android:id="@+id/view1"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_margin="10dp"
                 android:background="#DBDBDB"
-                app:layout_constraintTop_toBottomOf="@id/tv_home_my_story" />
+                app:layout_constraintTop_toBottomOf="@id/tv_home_my_story"
+                android:layout_marginTop="10dp"
+                />
 
             <!--여기부터!-->
             <com.google.android.material.imageview.ShapeableImageView
@@ -255,7 +256,6 @@
                 android:layout_marginTop="12dp"
                 android:src="@drawable/img_sample"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/siv_post_story"
                 app:layout_constraintTop_toTopOf="@id/view1"
                 app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Full" />
 
@@ -302,11 +302,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_post_more"
-                app:layout_constraintStart_toEndOf="@id/siv_post_story"
-                android:layout_marginStart="284dp"
                 app:layout_constraintTop_toBottomOf="@id/view1"
                 android:layout_marginTop="14dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="14dp"
                 />
 
             <ImageView
@@ -420,19 +419,23 @@
                 android:layout_marginTop="3dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/tv_post_content"
+                android:layout_width="280dp"
+                android:layout_height="13dp"
                 android:textColor="@color/black"
-                android:text="쿠잇 3기 시작합니다!! 다들 열심히 한 학기 마무리해봐요"
+                android:text="쿠잇 3기 시작합니다!! 다들 열심히 한 학기 마무리해봐요. 쿠잇 3기 시작합니다!! 다들 열심히 한 학기 마무리해봐요. 쿠잇 3기 시작합니다!! 다들 열심히 한 학기 마무리해봐요. "
+                android:maxLines="1"
+                android:ellipsize="end"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/tv_comment_account"
                 app:layout_constraintBottom_toBottomOf="@id/tv_comment_account"
                 android:layout_marginStart="4dp"/>
 
             <TextView
+                android:id="@+id/tv_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="... 더보기"
+                android:text="더보기"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@id/tv_comment_account"
                 app:layout_constraintBottom_toBottomOf="@id/tv_comment_account"
@@ -447,7 +450,7 @@
                 app:layout_constraintBottom_toTopOf="@id/fl_bottom_bar"
                 />
 
-            <FrameLayout
+            <!--<FrameLayout
                 android:id="@+id/fl_bottom_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -497,7 +500,7 @@
                     android:layout_marginStart="350dp"
                     />
 
-            </FrameLayout>
+            </FrameLayout>-->
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

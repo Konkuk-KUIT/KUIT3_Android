@@ -17,6 +17,16 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
+
+        binding.tvDetail.setOnClickListener {
+            binding.tvPostContent.apply {
+                maxLines=Int.MAX_VALUE
+                ellipsize=null
+            }
+        }
+
         return binding.root
     }
+
+
 }
