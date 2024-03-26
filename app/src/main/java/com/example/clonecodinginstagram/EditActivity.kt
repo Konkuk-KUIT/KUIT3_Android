@@ -13,6 +13,16 @@ class EditActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityEditBinding.inflate(layoutInflater)
 
+        var name=intent.getStringExtra("Name")
+        var content=intent.getStringExtra("Content")
+
+        binding.tvEditName.setText(name)
+        binding.tvEditPostContent.setText(content)
+
+        binding.tvEditCancelBtn.setOnClickListener {
+            finish()
+        }
+
         setContentView(binding.root)
     }
 }

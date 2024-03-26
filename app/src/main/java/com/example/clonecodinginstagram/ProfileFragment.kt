@@ -16,6 +16,10 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
+
+        var profileName=arguments?.getString("PostName")
+        binding.tvProfileId.text=profileName
+
         return binding.root
     }
 }

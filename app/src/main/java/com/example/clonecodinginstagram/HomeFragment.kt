@@ -6,10 +6,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import com.example.clonecodinginstagram.databinding.FragmentHomeBinding
-
+import com.example.clonecodinginstagram.databinding.FragmentProfileBinding
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
@@ -29,8 +30,22 @@ class HomeFragment : Fragment() {
             }
         }
         binding.postMore.setOnClickListener {
-            var intent=Intent(activity,EditActivity::class.java)
+            var intent=Intent(requireActivity(),EditActivity::class.java)
+            intent.putExtra("Name",binding.tvPostName.text.toString())
+            intent.putExtra("Content", binding.tvPostContent.text.toString())
             startActivity(intent)
+        }
+
+        binding.tvPostName.setOnClickListener {
+            val fragment=ProfileFragment()
+            val bundle=Bundle()
+            bundle.putString("PostName",binding.tvPostName.text.toString())
+            fragment.arguments=bundle
+
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.main_frm,fragment)
+                .commit()
+
         }
 
         return binding.root
