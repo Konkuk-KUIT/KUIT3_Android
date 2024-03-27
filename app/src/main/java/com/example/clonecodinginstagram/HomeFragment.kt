@@ -45,7 +45,6 @@ class HomeFragment : Fragment() {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.main_frm,fragment)
                 .commit()
-
         }
 
         return binding.root
